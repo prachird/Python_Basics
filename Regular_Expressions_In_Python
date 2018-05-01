@@ -1,0 +1,67 @@
+
+Regular expressions: import re
+
+raw string in python: r'hello'
+
+re.complie method is use to find patterns, which will return them as an variable
+
+pattern = re.complie(r'Hello')
+matches = pattern.finditer() #this finditer() will iterate through all the matches which are found my the complie method
+for match in matches:
+  print(match)
+  
+  
+.  -> matches any character except new line
+\d -> macthes if it is a digt(0-9)
+\D -> not a digit(0-9)
+\w -> word character(A-Z, a-z, 0-9, _)
+\W -> not a word character
+\s -> whitespace(space/tab/newline)
+\S -> not a whitespace(space/tab/newline)
+\b -> word boundary
+\B -> not a word boundary
+^  -> beginning of a string
+$  -> end of a string
+
+[] -> character set
+
+eg. [0-9a-zA-Z] -> will match with any single digit/single character
+
+^ within a [] denotes negation
+
+Brackets: 
+|  -> either Or
+() -> Group
+
+Quantifiers:
+* -> 0 or more
++ -> 1 or more
+? -> 0 or none
+{1} -> exact number       eg. r'\d{3}.\d{3}.\d{4}'  --> 300.345.4532
+{2-4} -> range(minimum, maximum)
+
+Groups: to extract a specific sub-pattern from a pattern
+eg. pattern = re.compile(r'([a-z][0-9]+)@(/.com)')
+complete pattern is group 0, and then sub-patterns as group 1,2,......
+
+other methods of re:
+re.search()...............will search for a specific pattern, it is not iterable
+re.findall()..............will just display the pattern, it is iterable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
