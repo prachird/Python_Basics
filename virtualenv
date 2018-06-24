@@ -1,0 +1,24 @@
+1. >> pip install virtualenv                 .....this installs the pip package for virtualenv
+
+2. create a directory to store the virtual environments
+>> mkdir Environments
+switch to the directory
+>> cd Environments
+
+3. >> virtualenv <name_of_virtual_env>       ... this will create a virtual env by the name specified in <>
+
+4. >> source <name_of_virtual_env>/bin/activate   ...this will take you inside the newly created virtual env.
+
+5. >> which pip                              .....this will show in which virtualenv currently you are working in
+
+6. >> pip list                             .....will display all the pip packages installed
+
+7. >> deactivate                           ....to come out of the virtual env
+
+8. >> pip freeze --local  >file.txt          .....this will store the pip configuration of the local env
+
+9. >> rm -rf <name_of_virtual_env>/          ....to delete a virtual env
+
+10 >> virtualenv -p /usr/bin/python3 <name_of_virtual_env>   .....to create a virtual env with a specific python version
+
+11. >>pip install -r file.txt          ....file.txt will have the configurations which can be used to setup the new virtual env
